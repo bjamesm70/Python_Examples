@@ -8,7 +8,7 @@
 # (Contact Info)
 
 
-class Player(object):
+class Player:
     
     def __init__(self, name):
         self.name = name
@@ -24,7 +24,7 @@ class Player(object):
         if new_lives >= 0:
             self._lives = new_lives
         else:
-            print("Can not set 'lives' to < 0.  Setting to 0.")
+            print("Can not set '_lives' to < 0.  Setting to 0.")
             self._lives = 0
             
     lives = property(fget=_get_lives, fset=_set_lives)
